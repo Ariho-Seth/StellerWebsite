@@ -4,7 +4,7 @@ const ProjectSection=()=>{
         {id:1,
          title:"Orbit Analytics Dashbord",
          description:"Interactive Analytics Dashboard with data visualization and sorting capabilities.",
-         image:"",
+         image:"/projects/project1.png",
          tags:["TypeScript", "D3.js", "Next.js"],
          demoUrl:"#",
          githubUrl:"#"
@@ -12,7 +12,7 @@ const ProjectSection=()=>{
         {   id:2,
             title:"SaaS Landing Page",
             description:"A beautiful landing page App using React and Tailwind",
-            image:"",
+            image:"/projects/project2.png",
             tags:["React", "Tailwind", "Supabase"],
             demoUrl:"#",
             githubUrl:"#"
@@ -20,7 +20,7 @@ const ProjectSection=()=>{
            {id:3,
             title:"E-commerce Platform",
             description:"Full featured e-commerce platform with user authentication and payment processing.",
-            image:"",
+            image:"/projects/project3.png",
             tags:["React", "Node.js", "Stripe"],
             demoUrl:"#",
             githubUrl:"#"
