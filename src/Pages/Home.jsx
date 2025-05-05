@@ -1,4 +1,5 @@
 import AboutSection from "../components/AboutSection";
+import ContactSection from "../components/ContactSection";
 import HeroSection from "../components/HeroSetion";
 import Navbar from "../components/Navbar";
 import ProjectSection from "../components/ProjectsSection";
@@ -25,6 +26,8 @@ const Home=()=>{
             <SkillSection />
 
             <ProjectSection />
+
+            <ContactSection />
         </div>
     )
 }
