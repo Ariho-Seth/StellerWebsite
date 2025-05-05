@@ -1,9 +1,30 @@
 import { Facebook, Github, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter, X, Youtube } from "lucide-react";
 import { cn } from "../lib/utils";
+import { useToast } from "./hooks/use-toast";
+import { useState } from "react";
 
 const ContactSection = () => {
+    const {toast} = useToast();
+    const [isSending, setIsSending]= useState(false);
+
+    const handleSubmit= (e)=>{
+        setIsSending(true);
+        console.log("Handle submit method called")
+        
+        e.preventDefault();
+
+
+        setTimeout(()=>{
+            toast({
+                    title: "Message  Sent!",
+                    description: "Thanks for your message, I'll get back to you soon!"
+                });
+                setIsSending(false)
+           }, 1500)
+
+    }
     return (
-        <section id="contacts" className="py-24-px-4 relative bg-secondary/30">
+        <section id="contacts" className="py-24-px-4 mb-5 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:texl-4xl font-bold mb-4 text-center">
                     Get In <span className="text-primary">Touch</span>
@@ -84,10 +105,10 @@ const ContactSection = () => {
 
 
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
+                    <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={ handleSubmit }>
                         <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" >
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                                 <input type="text"
@@ -121,7 +142,8 @@ const ContactSection = () => {
                             <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2",
                                                                 
 
-                            )}> Send Message
+                            )}> 
+                                {isSending ? "Sending"  : "Send Message"}
                                 <Send />
 
                             </button>

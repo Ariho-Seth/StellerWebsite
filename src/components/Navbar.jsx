@@ -37,8 +37,8 @@ const Navbar = () => {
 
                 {/* Desktop Navbar*/}
                 <div className="hidden md:flex space-x-8">
-                    {navItems.map(item => (
-                        <a href={item.href} key={item.id} className="text-foreround/80 hover:text-primary transition-colors duration-300">
+                    {navItems.map((item, key) => (
+                        <a href={item.href} key={key} className="text-foreround/80 hover:text-primary transition-colors duration-300">
                             {item.name}
                         </a>
                     ))}
@@ -56,8 +56,8 @@ const Navbar = () => {
                     isMenuOPen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-event-none"
                 )} >
                     <div className="flex flex-col space-y-8 text-xl">
-                        {navItems.map(item => (
-                            <a href={item.href} key={item.id} 
+                        {navItems.map((item, key) => (
+                            <a href={item.href} key={key} 
                             className="text-foreround/80 hover:text-primary transition-colors duration-300"
                             onClick={()=> setIsMenuOPen(false)}
                             >

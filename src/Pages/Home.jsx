@@ -1,5 +1,6 @@
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSetion";
 import Navbar from "../components/Navbar";
 import ProjectSection from "../components/ProjectsSection";
@@ -28,6 +29,8 @@ const Home=()=>{
             <ProjectSection />
 
             <ContactSection />
+
+            <Footer />
         </div>
     )
 }
